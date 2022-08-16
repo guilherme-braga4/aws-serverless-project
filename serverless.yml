@@ -1,3 +1,4 @@
+app: aws-node-http-api
 service: teste
 frameworkVersion: '3'
 
