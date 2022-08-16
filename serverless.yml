@@ -1,4 +1,4 @@
-service: aws-serverless-project
+service: teste
 frameworkVersion: '3'
 
 provider:
