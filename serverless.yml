@@ -5,11 +5,17 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs16.x
+  # iamRoleStatements: 
+  #   - Effect: Allow
+  #     Action:
+  #       - comprehend:*
+  #       Resource: '*'
 
 functions:
   hello:
-    handler: src/get.getLambda
+    handler: src/generate.handler
     events:
-      - httpApi:
-          path: /sayhello
-          method: get
+      - http:
+          path: /capture
+          method: POST
+          cors: true
