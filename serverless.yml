@@ -4,12 +4,12 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs16.x
 
 functions:
   hello:
-    handler: handler.firstLambda
+    handler: src/get.getLambda
     events:
       - httpApi:
-          path: /
+          path: /sayhello
           method: get
